@@ -1,7 +1,5 @@
 ---
 title: "US salmon imports from `r params$country`"
-author: "Allison Horst"
-date: "2/22/2021"
 output: html_document
 params:
   country: country
@@ -45,7 +43,7 @@ ggplot(data = country_data, aes(x = year, y = imported)) +
 # rmarkdown::render(input = "salmon.Rmd", params = list(country = "Country Name"), output_file = "output_file_name.html")
 ```
 
-```{r, echo = FALSE}
+```{r, eval = FALSE}
 # Or make a function: 
 render_salmon_report = function(country) {
   rmarkdown::render(
